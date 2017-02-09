@@ -4,10 +4,17 @@ use \crazyday\models\User as User;
 use \crazyday\vues\ConnexionVue as ConnexionVue;
 
 class ControleurConnexion{
+
+
+	public function afficher(){
+		$connect = new ConnexionVue();
+		print $connect->render(1);
+
+	}
 	
-	public function connexion($prems,$pseudo =null,$mp=null){
+	public function connexion($pseudo =null,$mp=null){
 		// controle la connexion
-		$connect = new VueConnexion($this->url);
+		$connect = new ConnexionVue();
 		if(!isset($_SESSION['pseudo'],$_SESSION['mp'])){
 			if (!isset($pseudo)){
 				$html= $connect->render(1);
