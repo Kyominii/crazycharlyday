@@ -33,7 +33,7 @@ class InscriptionControleur{
 				echo "enregistré";
 			$n = new User();
 			$n->nom=$pseudo;
-			$n->mp = password_hash($mp);
+			$n->mp = password_hash($mp, PASSWORD_BCRYPT);
 			$n->save();
 			$res=$v->render(2,$tabverite);
 			$_SESSION['pseudo']=$pseudo;
