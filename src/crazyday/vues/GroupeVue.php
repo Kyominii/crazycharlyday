@@ -20,7 +20,7 @@ class GroupeVue
 
     private function htmlDetailGroup(){
         $html = "<h1 align=\"center\" style=\"color:#ffffff;\">Groupe n°" . $this->pbc['groupe']->id . "</h1>
-        <p style=\"color:#aaaaaa;\"><ul>";
+        <div style=\"color:#aaaaaa;\"><ul>";
 
         foreach ($this->pbc['membres'] as $membre){
             if($membre[1] == 1)
@@ -28,7 +28,7 @@ class GroupeVue
             else
                 $html.="<li>" . $membre[0]->nom . "</li>";
         }
-        $html.="</ul></p><p style=\"font-size:#aaaaaa;\">Logement : ".$this->pbc['groupe']->id_logement."</p>";
+        $html.="</ul></div><p style=\"font-size:#aaaaaa;\">Logement : ".$this->pbc['groupe']->id_logement."</p>";
         $html.="<p style=\"font-size:#aaaaaa;\">Description : " . $this->pbc['groupe']->description."</p>";
 
         return $html;
