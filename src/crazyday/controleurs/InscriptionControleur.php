@@ -1,6 +1,6 @@
 <?php
 namespace crazyday\controleurs;
-use \crazyday\models\User as Utilisateur;
+use \crazyday\models\User as User;
 use \crazyday\vues\InscriptionVue as InscriptionVue;
 class InscriptionControleur{
 	public function afficher(){
@@ -24,18 +24,12 @@ class InscriptionControleur{
 		if(isset($mp) && $mp==$cmp && $mp!=null){
 			$tabverite['mp']=$mp;
 		}
-		/*vérification email
-		$test2 = User::where('email', '=', $email)->first();
-		if(isset($email) && $email==$cemail && empty($test2) && $email!=null){
-			$tabverite['email']=$email;
-		}
-		*/
 		$v = new InscriptionVue(); 
 		if (!isset($tabverite['pseudo']) || !isset($tabverite['mp'])){
 			$res=$v->render(1,$tabverite);
 		}else{
 			if (isset($pseudo) && isset($mp) && isset($email)){
-			$n = new Utilisateur();
+			$n = new User();
 			$n->pseudo=$pseudo;
 			$n->mp = $mp; //password_hash($mp,PASSWORD_DEFAULT['cost'=> 12] );
 			$n->save();
