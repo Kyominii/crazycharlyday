@@ -20,7 +20,7 @@ class GroupeVue
 
     private function htmlDetailGroup(){
         $html = "<h1 align=\"center\" style=\"color:#ffffff;\">Groupe n°" . $this->pbc['groupe']->id . "</h1>
-        <p style=\"font-size:#aaaaaa;\"><ul>";
+        <p style=\"color:#aaaaaa;\"><ul>";
 
         foreach ($this->pbc['membres'] as $membre){
             if($membre[1] == 1)
