@@ -18,13 +18,11 @@ class UtilisateurVue
         foreach ($this->pbc as $users){
 
 			
-			$html.='<div class="col-sm-6 col-md-4"><div class="thumbnail">' . "<img src='assets/user/$users->id.jpg'/>
+			$html.='<div class="col-sm-6 col-md-4"><a href="user/' . $users->id . '" style="text-decoration:none"><div class="thumbnail">' . "<img src='assets/user/$users->id.jpg'/>
 			<div class=\"caption\"> 
 				<h3 align=\"center\">$users->nom</h3> 
 			</div> 
-			</div></div>";
-            
-
+			</div></a></div>";
             
 
         }
@@ -33,6 +31,14 @@ class UtilisateurVue
 
         return $html;
     }
+
+
+    private function htmlDetailedUser(){
+        return "<p style=\"color:#ffffff\">ID : " . $this->pbc->id . "; NOM : " . $this->pbc->nom  . "; MESSAGE : " . $this->pbc->message . "</p><img src='../assets/user/" . $this->pbc->id . ".jpg' />";
+    }
+
+
+
 
 	
 	function render($selecteur){
@@ -44,10 +50,12 @@ class UtilisateurVue
 				$racine = "./";
                 break;
             case "DETAILED_USER":
-                $html = $this->htmlDetailedUser();
+                $content = $this->htmlDetailedUser();
+				$racine = "./../";
                 break;
             case "NO_USER":
-                $html = "<h1>Aucun utilisateur ne correspond à cette URL !</h1>";
+                $content = "<h1>Aucun utilisateur ne correspond à cette URL !</h1>";
+				$racine = "./../";
                 break;
             default:
                 $content = "<h1>Erreur : mauvais selecteur !!!</h1>";
