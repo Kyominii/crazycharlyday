@@ -5,7 +5,7 @@ use \crazyday\vues\InscriptionVue as InscriptionVue;
 class InscriptionControleur{
 	public function afficher(){
 		$v = new InscriptionVue(); 
-		$v->render(3);
+		print $v->render(3);
 	}
 
 	public function inscription($pseudo =null,$mp=null,$cmp=null){
