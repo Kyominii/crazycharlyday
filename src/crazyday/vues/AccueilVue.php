@@ -70,6 +70,7 @@ class AccueilVue
 			</div> 
 			</div></a></div>
 			</div></div>";
+			return $content;
 	}
 
     function render($selecteur){
