@@ -53,6 +53,12 @@ $app->get('/users', function(){
     echo $controleur->renderListUsers();
 })->setName('UsersGET');
 
+//Page de détail pour un utilisateur
+$app->get('/user/{id}', function($request, $response, $args){
+    $controleur = new controleurs\UtilisateurControleur();
+    echo $controleur->renderUser($args['id']);
+})->setName("UserGET");
+
 //Lancement du micro-framework
 $app->run();
 
