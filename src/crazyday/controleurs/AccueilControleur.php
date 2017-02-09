@@ -9,7 +9,7 @@ class AccueilControleur
 
     function renderAccueil(){
 		 $vue = new vues\AccueilVue();
-		if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp'])){
+		if(!isset($_SESSION['pseudo']) ||  !isset($_SESSION['mp']) || !controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp'])){
 			return $vue->render("DEFAUT");
 		}else{
 			return $vue->render('LOGGE')
