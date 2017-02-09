@@ -54,7 +54,7 @@ $app->get('/inscription',function(){
 
 $app->post('/inscription',function(){
 	$Inscription = new controleurs\InscriptionControleur();
-	$Inscription->inscription($_POST['pseudo'],$_POST['pseudo'],$_POST['pseudo']);
+	$Inscription->inscription($_POST['pseudo_inscrit'],$_POST['mp_inscrit'],$_POST['cmp_inscrit']);
 })->setName('InscriptionPOST');
 
 //Page de liste des utilisateurs
