@@ -1,6 +1,6 @@
 <?php
 namespace crazyday\controleurs;
-use \crazyday\models\User as User;
+use \crazyday\modeles\User as User;
 use \crazyday\vues\ConnexionVue as ConnexionVue;
 
 class ConnexionControleur{
