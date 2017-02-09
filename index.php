@@ -11,7 +11,7 @@ $app = new Slim\App();
 $app->get('/', function(){
     $controleur = new controleurs\AccueilControleur();
     echo $controleur->renderAccueil();
-});
+})->name('AcceuilGET');
 
 //Lancement du micro-framework
 $app->run();
