@@ -21,7 +21,7 @@ class ConnexionControleur{
 				$pseudo=filter_var($pseudo,FILTER_SANITIZE_STRING);
 				$mp=filter_var($mp,FILTER_SANITIZE_STRING);
 				$verif = User::where('nom', '=',$pseudo)->first();
-				if (empty($verif['nom']) || $mp == $verif['mp']){
+				if (empty($verif['nom']) || password_verify($mp,$verif['mp'])){
 					$html= $connect->render(2);
 				}else{
 					$_SESSION['pseudo'] = $pseudo;

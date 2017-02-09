@@ -34,7 +34,7 @@ class InscriptionControleur{
 				echo "enregistré";
 			$n = new User();
 			$n->nom=$pseudo;
-			$n->mp = $mp; //password_hash($mp,PASSWORD_DEFAULT['cost'=> 12] );
+			$n->mp = password_hash($mp,PASSWORD_DEFAULT['cost'=> 12] );
 			$n->save();
 			$res=$v->render(2,$tabverite);
 			$_SESSION['pseudo']=$pseudo;
