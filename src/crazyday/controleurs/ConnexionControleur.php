@@ -8,9 +8,9 @@ class ConnexionControleur{
 
 	public function afficher(){
 		//affiche le formulaire quand on arrive sur la page, donc ne controle pas les données
-		echo "poule";
-		/*$connect = new ConnexionVue();
-		print $connect->render(1);*/
+		
+		$connect = new ConnexionVue();
+		print $connect->render(1);
 
 	}
 	
