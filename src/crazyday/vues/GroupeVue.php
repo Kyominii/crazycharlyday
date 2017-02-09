@@ -24,9 +24,9 @@ class GroupeVue
 
         foreach ($this->pbc['membres'] as $membre){
             if($membre[1] == 1)
-                $html.="<li><i>" . $membre[0]->nom . "</i></li>";
+                $html.="<li style=\"color:#aaaaaa;\"><i>" . $membre[0]->nom . "</i></li>";
             else
-                $html.="<li>" . $membre[0]->nom . "</li>";
+                $html.="<li style=\"color:#aaaaaa;\">" . $membre[0]->nom . "</li>";
         }
         $html.="</ul></div><p style=\"font-size:#aaaaaa;\">Logement : ".$this->pbc['groupe']->id_logement."</p>";
         $html.="<p style=\"font-size:#aaaaaa;\">Description : " . $this->pbc['groupe']->description."</p>";
