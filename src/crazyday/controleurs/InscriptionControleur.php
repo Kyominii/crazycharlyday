@@ -1,7 +1,7 @@
 <?php
 namespace crazyday\controleurs;
 use \crazyday\models\User as Utilisateur;
-use \crazyday\vues\InscriptionVue as VueInscription;
+use \crazyday\vues\InscriptionVue as InscriptionVue;
 class InscriptionControleur{
 	public function afficher(){
 		$v = new InscriptionVue(); 
