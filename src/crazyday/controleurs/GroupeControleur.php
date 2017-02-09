@@ -13,7 +13,7 @@ class GroupeControleur
 
         if(empty($user)){
             $groupe = new modeles\Groupe();
-            $groupe->decription = "";
+            $groupe->description = "";
             $groupe->id_logement = -1;
             $groupe->url = sha1(uniqid("groupecreate", true));;
             $groupe->save();

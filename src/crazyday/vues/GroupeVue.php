@@ -11,7 +11,7 @@ class GroupeVue
     }
 
     private function htmlCreatedGroup(){
-        $html = "<a href='" . $this->pbc->url . "'>LIEN</a>";
+        $html = "<a href='/group/" . $this->pbc->url . "'>LIEN</a>";
 
         return $html;
     }
