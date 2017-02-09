@@ -43,9 +43,8 @@ $app->get('/connexion',function(){
 })->setName('ConnexionGET');
 
 $app->post('/connexion',function(){
-	$s = \Slim\Slim::getInstance();
 	$controleurConnexion = new controleurs\ConnexionControleur();
-	$controleurConnexion->connexion($s->request->post('pseudo'),$s->request->post('mp'));
+	$controleurConnexion->connexion($_POST['pseudo'], $_POST['mp']);
 })->setName('ConnexionPOST');
 
 //Page de liste des utilisateurs
@@ -64,13 +63,13 @@ $app->get('/user/{id}', function($request, $response, $args){
 $app->get('/logements', function(){
     $controleur = new controleurs\LogementControleur();
     echo $controleur->renderListLogement();
-})->setName('UsersGET');
+})->setName('LogementsGET');
 
 //Page de détail pour un utilisateur
 $app->get('/logement/{id}', function($request, $response, $args){
     $controleur = new controleurs\LogementControleur();
     echo $controleur->renderLogement($args['id']);
-})->setName("UserGET");
+})->setName("LogementGET");
 
 //Lancement du micro-framework
 $app->run();
