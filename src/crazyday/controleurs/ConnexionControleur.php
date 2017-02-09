@@ -16,8 +16,7 @@ class ConnexionControleur{
 	
 	public function connexion($pseudo =null,$mp=null){
 		// controle la connexion
-		echo "poule";
-		/*$connect = new ConnexionVue();
+		$connect = new ConnexionVue();
 				//filtrer pseudo et mot de pass ici !!!!
 				$pseudo=filter_var($pseudo,FILTER_SANITIZE_STRING);
 				$mp=filter_var($mp,FILTER_SANITIZE_STRING);
@@ -34,7 +33,7 @@ class ConnexionControleur{
 		$html = $connect->render(3);
 	}
 		print $html;
-		*/
+		
 	}
 
 }
