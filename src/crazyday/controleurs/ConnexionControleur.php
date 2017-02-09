@@ -14,15 +14,16 @@ class ConnexionControleur{
 
 	}
 	
-	public function connexion($pseudo =null,$mp=null){
+	public function connexion($pseudo, $mp){
 		// controle la connexion
 		$connect = new ConnexionVue();
 				//filtrer pseudo et mot de pass ici !!!!
 				$pseudo=filter_var($pseudo,FILTER_SANITIZE_STRING);
 				$mp=filter_var($mp,FILTER_SANITIZE_STRING);
 				$verif = User::where('nom', '=',$pseudo)->first();
-				if (empty($verif['nom']) || password_verify($mp,$verif['mp'])){
+				if (empty($verif->nom) || !password_verify($mp,$verif->Mp)){
 					$html= $connect->render(2);
+					var_dump($mp);
 				}else{
 					$_SESSION['pseudo'] = $pseudo;
 					$_SESSION['mp'] = $mp;
@@ -32,4 +33,16 @@ class ConnexionControleur{
 		
 	}
 
+	public static function checkConnexion($pseudo, $mdp){
+
+        //filtrer pseudo et mot de pass ici !!!!
+        $pseudo=filter_var($pseudo,FILTER_SANITIZE_STRING);
+        $mdp=filter_var($mdp,FILTER_SANITIZE_STRING);
+        $verif = User::where('nom', '=',$pseudo)->first();
+        if (!empty($verif->nom) && password_verify($mdp,$verif->Mp)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

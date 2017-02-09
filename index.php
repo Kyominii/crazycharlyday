@@ -57,26 +57,39 @@ $app->post('/inscription',function(){
 	$Inscription->inscription($_POST['pseudo_inscrit'],$_POST['mp_inscrit'],$_POST['cmp_inscrit']);
 })->setName('InscriptionPOST');
 
+$app->get('/deconnexion', function(){
+    unset($_SESSION['pseudo']);
+    unset($_SESSION['mp']);
+})->setName("DeconnexionGET");
+
 //Page de liste des utilisateurs
-$app->get('/users', function(){
+$app->get('/users', function($request, $response, $args){
+    if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
+        return $response->withRedirect("/");
     $controleur = new controleurs\UtilisateurControleur();
     echo $controleur->renderListUsers();
 })->setName('UsersGET');
 
 //Page de détail pour un utilisateur
 $app->get('/user/{id}', function($request, $response, $args){
+    if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
+        return $response->withRedirect("/");
     $controleur = new controleurs\UtilisateurControleur();
     echo $controleur->renderUser($args['id']);
 })->setName("UserGET");
 
 //Page de liste des appartements
-$app->get('/logements', function(){
+$app->get('/logements', function($request, $response, $args){
+    if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
+        return $response->withRedirect("/");
     $controleur = new controleurs\LogementControleur();
     echo $controleur->renderListLogement();
 })->setName('LogementsGET');
 
 //Page de détail pour un utilisateur
 $app->get('/logement/{id}', function($request, $response, $args){
+    if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
+        return $response->withRedirect("/");
     $controleur = new controleurs\LogementControleur();
     echo $controleur->renderLogement($args['id']);
 })->setName("LogementGET");
