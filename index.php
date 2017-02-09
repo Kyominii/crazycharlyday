@@ -24,14 +24,21 @@ $db->addConnection( [
 $db->setAsGlobal();
 $db->bootEloquent();
 
+
 //Création de l'objet du micro-framework
 $app = new Slim\App();
 
 //Cas où nous sommes à la racine du site
 $app->get('/', function(){
-    $controleur = new controleurs\AccueilControleur();
+    $controleurAccueil = new controleurs\AccueilControleur();
+
     echo $controleur->renderAccueil();
 })->setName('AcceuilGET');
+
+//Page de connexion des utilisateurs
+$app->get('/connexion',function(){
+	$controleurConnexion = new controleurs\ConnexionControleur();
+})->setName('ConnexionGET');
 
 //Page de liste des utilisateurs
 $app->get('/users', function(){
