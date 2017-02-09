@@ -38,7 +38,14 @@ $app->get('/', function(){
 //Page de connexion des utilisateurs
 $app->get('/connexion',function(){
 	$controleurConnexion = new controleurs\ConnexionControleur();
+	$controleurConnexion->afficher();
 })->setName('ConnexionGET');
+
+$app->post('/connexion',function(){
+	$s = \Slim\Slim::getInstance();
+	$controleurConnexion = new controleurs\ConnexionControleur();
+	$controleurConnexion->connexion($s->request->post('pseudo'),$s->request->post('mp'));
+})->setName('ConnexionPOST');
 
 //Page de liste des utilisateurs
 $app->get('/users', function(){
