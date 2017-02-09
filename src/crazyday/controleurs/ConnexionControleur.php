@@ -3,7 +3,7 @@ namespace crazyday\controleurs;
 use \crazyday\models\User as User;
 use \crazyday\vues\ConnexionVue as ConnexionVue;
 
-class ControleurConnexion{
+class ConnexionControleur{
 
 
 	public function afficher(){

@@ -1,6 +1,6 @@
 <?php
 namespace giftbox\vues;
-class VueConnexion {
+class ConnexionVue {
 	
 	public function render($i) {
 		$app = \Slim\Slim::getInstance();
