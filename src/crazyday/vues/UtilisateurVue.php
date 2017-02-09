@@ -16,6 +16,7 @@ class UtilisateurVue
         $html="<div class='row'>";
 
         foreach ($this->pbc as $users){
+
 			
 			$html.='<div class="col-sm-6 col-md-4"><div class="thumbnail">' . "<img src='assets/user/$users->id.jpg'/>
 			<div class=\"caption\"> 
@@ -23,13 +24,15 @@ class UtilisateurVue
 			</div> 
 			</div></div>";
             
+
+            
+
         }
 
         $html .= "</div>";
 
         return $html;
     }
-
 
 	
 	function render($selecteur){
@@ -39,6 +42,12 @@ class UtilisateurVue
             case "LIST_USERS":
                 $content = $this->htmlListUsers();
 				$racine = "./";
+                break;
+            case "DETAILED_USER":
+                $html = $this->htmlDetailedUser();
+                break;
+            case "NO_USER":
+                $html = "<h1>Aucun utilisateur ne correspond à cette URL !</h1>";
                 break;
             default:
                 $content = "<h1>Erreur : mauvais selecteur !!!</h1>";

@@ -38,12 +38,31 @@ $app->get('/', function(){
 //Page de connexion des utilisateurs
 $app->get('/connexion',function(){
 	$controleurConnexion = new controleurs\ConnexionControleur();
+	$controleurConnexion->afficher();
 })->setName('ConnexionGET');
+
+$app->post('/connexion',function(){
+	$s = \Slim\Slim::getInstance();
+	$controleurConnexion = new controleurs\ConnexionControleur();
+	$controleurConnexion->connexion($s->request->post('pseudo'),$s->request->post('mp'));
+})->setName('ConnexionPOST');
 
 //Page de liste des utilisateurs
 $app->get('/users', function(){
     $controleur = new controleurs\UtilisateurControleur();
     echo $controleur->renderListUsers();
+})->setName('UsersGET');
+
+//Page de détail pour un utilisateur
+$app->get('/user/{id}', function($request, $response, $args){
+    $controleur = new controleurs\UtilisateurControleur();
+    echo $controleur->renderUser($args['id']);
+})->setName("UserGET");
+
+//Page de liste des appartements
+$app->get('/logements', function(){
+    $controleur = new controleurs\LogementControleur();
+    echo $controleur->renderListLogement();
 })->setName('UsersGET');
 
 //Lancement du micro-framework
