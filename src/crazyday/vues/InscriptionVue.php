@@ -5,12 +5,7 @@ class InscriptionVue {
 		$content='';
 		switch($i){
 			case 1: {
-
-				$content='';
-
-				$content='<form method="POST" action="/inscription">'
-				
-						
+				$content='<form method="POST" action="/inscription">';
 						if (empty($tab['pseudo'])){
 							$content.='<input type="text" name="pseudo_inscrit" />pseudo non valide';
 						}elseif (isset($tab['pseudo'])){
