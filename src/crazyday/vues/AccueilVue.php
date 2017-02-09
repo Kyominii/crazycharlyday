@@ -21,7 +21,7 @@ class AccueilVue
 			Connectez vous afin de rejoindre ou créer un groupe de colocation et ainsi trouver votre nouvelle demeur.
 			</p>
             <p class="lead" align="center">
-              <a href=".'$app->urlFor('ConnexionGET').'" class="btn btn-lg btn-default">Connexion</a>
+              <a href="'.$app->urlFor('ConnexionGET').'" class="btn btn-lg btn-default">Connexion</a>
             </p>
           </div>';
     }
