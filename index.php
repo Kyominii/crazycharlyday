@@ -1,9 +1,8 @@
 <?php
 session_start();
 require_once ("vendor/autoload.php");
-
-use crazyday\controleurs as controleurs;
 use Illuminate\Database\Capsule\Manager as DB;
+use crazyday\controleurs as controleurs;
 
 //Initialisation de la connexion
 $db = new DB();
@@ -30,7 +29,8 @@ $app = new Slim\App();
 
 //Cas où nous sommes à la racine du site
 $app->get('/', function(){
-    $controleurAccueil = new controleurs\AccueilControleur();
+
+    $controleur = new controleurs\AccueilControleur();
 
     echo $controleur->renderAccueil();
 })->setName('AcceuilGET');
