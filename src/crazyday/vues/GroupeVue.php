@@ -28,8 +28,8 @@ class GroupeVue
             else
                 $html.="<li style=\"color:#aaaaaa;\">" . $membre[0]->nom . "</li>";
         }
-        $html.="</ul></div><p style=\"font-size:#aaaaaa;\">Logement : ".$this->pbc['groupe']->id_logement."</p>";
-        $html.="<p style=\"font-size:#aaaaaa;\">Description : " . $this->pbc['groupe']->description."</p>";
+        $html.="</ul></div><p style=\"color:#aaaaaa;\">Logement : ".$this->pbc['groupe']->id_logement."</p>";
+        $html.="<p style=\"color:#aaaaaa;\">Description : " . $this->pbc['groupe']->description."</p>";
 
         return $html;
     }
