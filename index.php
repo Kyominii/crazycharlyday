@@ -48,12 +48,12 @@ $app->post('/connexion',function(){
 })->setName('ConnexionPOST');
 
 $app->get('/inscription',function(){
-	$Inscription = new controleurs\InscriptionConnexion();
+	$Inscription = new controleurs\InscriptionControleur();
 	$Inscription->afficher();
 })->setName('InscriptionGET');
 
 $app->post('/inscription',function(){
-	$Inscription = new controleurs\InscriptionConnexion();
+	$Inscription = new controleurs\InscriptionControleur();
 	$Inscription->inscription($_POST['pseudo'],$_POST['pseudo'],$_POST['pseudo']);
 })->setName('InscriptionPOST');
 
