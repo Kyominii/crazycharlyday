@@ -101,6 +101,13 @@ $app->get('/createGroup', function($request, $response, $args){
     echo $controleur->createGroup();
 })->setName("CreateGroupGET");
 
+$app->get('/group/{id}', function($request, $response, $args){
+    if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
+        return $response->withRedirect("/");
+    $controleur = new controleurs\GroupeControleur();
+    echo $controleur->detailGroup($args['id']);
+})->setName("CreateGroupGET");
+
 //Lancement du micro-framework
 $app->run();
 

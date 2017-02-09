@@ -10,4 +10,7 @@ class Groupe extends \Illuminate\Database\Eloquent\Model
     protected $primaryKey = 'id';
     public $timestamps = false;
 
+    public function membres(){
+        return $this->hasMany('\crazyday\modeles\EstMembre', 'id_groupe');
+    }
 }

@@ -18,6 +18,22 @@ class GroupeVue
         return $html;
     }
 
+    private function htmlDetailGroup(){
+        $html = "<h1>Groupe n°" . $this->pbc['groupe']->id . "</h1>
+        <ul>";
+
+        foreach ($this->pbc['membres'] as $membre){
+            if($membre[1] == 1)
+                $html.="<li><i>" . $membre[0]->nom . "</i></li>";
+            else
+                $html.="<li>" . $membre[0]->nom . "</li>";
+        }
+        $html.="</ul><p>Logement : ".$this->pbc['groupe']->id_logement."</p>";
+        $html.="<p>Description : " . $this->pbc['groupe']->description."</p>";
+
+        return $html;
+    }
+
     function render($selecteur){
 
         $content = "";
@@ -28,6 +44,11 @@ class GroupeVue
                 break;
             case "NO_GROUP":
                 $content = "<h1>Aucun groupe ne correspond à cette URL !</h1>";
+            case "DETAIL_GROUP":
+                $html = $this->htmlDetailGroup();
+                break;
+            case "FORBIDDEN":
+                $html = "<h1>Vous n'avez pas la permission d'acéder à ce groupe !</h1>";
                 break;
             default:
                 $content = "<h1>Erreur : mauvais selecteur !!!</h1>";

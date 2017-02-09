@@ -32,4 +32,23 @@ class GroupeControleur
         return $vue->render("CREATE_GROUP");
     }
 
+    public function detailGroup($id){
+
+        $user = modeles\EstMembre::where('id_groupe', '=', modeles\Groupe::where('url', '=', $id)->first()->id)->where('estCreateur', '=', true)->where('id_user', '=', modeles\User::where('nom', '=', $_SESSION['pseudo'])->first()->id)->first();
+        if(empty($user)){
+            $vue = new vues\GroupeVue();
+            return $vue->render("FORBIDDEN");
+        } else {
+
+            $object['groupe'] =  modeles\Groupe::where('url', '=', $id)->first();
+            $members = modeles\EstMembre::where('id_groupe', '=', $object['groupe']->id)->get();
+            foreach ($members as $member){
+                $object['membres'][] = [modeles\User::where('id', '=', $member->id_user)->first(), $member->estCreateur];
+            }
+
+            $vue = new vues\GroupeVue($object);
+            return $vue->render("DETAIL_GROUP");
+        }
+    }
+
 }
