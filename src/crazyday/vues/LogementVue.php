@@ -44,7 +44,7 @@ class LogementVue
         switch ($selecteur){
             case "LIST_LOGEMENT":
                 $content = $this->htmlListLogement();
-				$racine="";
+				$racine="./";
                 break;
             case "DETAILED_LOGEMENT":
                 $content = $this->htmlDetailedUser();
