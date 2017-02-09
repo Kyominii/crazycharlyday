@@ -37,8 +37,10 @@ $app->get('/', function(){
 
 //Page de connexion des utilisateurs
 $app->get('/connexion',function(){
-	$controleurConnexion = new controleurs\ConnexionControleur();
-	$controleurConnexion->afficher();
+	echo "prout";
+	//$controleurConnexion = new controleurs\ConnexionControleur();
+	//$controleurConnexion->afficher();
+
 })->setName('ConnexionGET');
 
 $app->post('/connexion',function(){
