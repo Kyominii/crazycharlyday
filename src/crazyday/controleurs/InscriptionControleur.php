@@ -12,23 +12,26 @@ class InscriptionControleur{
 		$pseudo =filter_var($pseudo,FILTER_SANITIZE_STRING);
 		$mp=filter_var($mp,FILTER_SANITIZE_STRING);
 		$cmp=filter_var($cmp,FILTER_SANITIZE_STRING);
-		$email=filter_var($email,FILTER_SANITIZE_EMAIL);
-		$cemail=filter_var($cemail,FILTER_SANITIZE_EMAIL);
 		$tabverite = array();
 		//vérification pseudo
 		$test = User::where('nom', '=', $pseudo)->first();
 		if(isset($pseudo) && empty($test) && $pseudo!=null){//rajouter d'autre vérification
 			$tabverite['pseudo'] =$pseudo;
+			echo "pseudo";
 		}
 		//vérification mot de passe
 		if(isset($mp) && $mp==$cmp && $mp!=null){
 			$tabverite['mp']=$mp;
+			echo "mp";
 		}
 		$v = new InscriptionVue(); 
 		if (!isset($tabverite['pseudo']) || !isset($tabverite['mp'])){
 			$res=$v->render(1,$tabverite);
+			echo "rendu 1";
 		}else{
+			echo "enregistrement";
 			if (isset($pseudo) && isset($mp)){
+				echo "enregistré";
 			$n = new User();
 			$n->nom=$pseudo;
 			$n->mp = $mp; //password_hash($mp,PASSWORD_DEFAULT['cost'=> 12] );
