@@ -45,7 +45,7 @@ class ConnexionVue {
 			}
 			case 3: {
 				$p = $_SESSION['pseudo'];
-				$content = '<form method="POST" action="/">
+				$content = '<form method="GET" action="/">
 								<p> 
 								Bonjours '.$p.
 								'<input type="submit" name="deco" value="Retourner a l\'accueil">
