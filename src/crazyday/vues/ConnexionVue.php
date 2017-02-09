@@ -61,7 +61,7 @@ class VueConnexion {
 
 </div>
 </body>
-</html>
+</html>'
   }
 
 
