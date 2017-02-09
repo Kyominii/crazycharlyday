@@ -94,6 +94,13 @@ $app->get('/logement/{id}', function($request, $response, $args){
     echo $controleur->renderLogement($args['id']);
 })->setName("LogementGET");
 
+$app->get('/createGroup', function($request, $response, $args){
+    if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
+        return $response->withRedirect("/");
+    $controleur = new controleurs\GroupeControleur();
+    echo $controleur->createGroup();
+})->setName("CreateGroupGET");
+
 //Lancement du micro-framework
 $app->run();
 
