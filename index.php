@@ -106,7 +106,15 @@ $app->get('/group/{id}', function($request, $response, $args){
         return $response->withRedirect("/");
     $controleur = new controleurs\GroupeControleur();
     echo $controleur->detailGroup($args['id']);
-})->setName("CreateGroupGET");
+})->setName("GroupDetailGET");
+
+$app->get('/group/{id}/add/{member}', function($request, $response, $args){
+    if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
+        return $response->withRedirect("/");
+    $controleur = new controleurs\GroupeControleur();
+    $controleur->addMember($args['id'], $args['member']);
+    return $response->withRedirect("/group/" . $args['id']);
+})->setName("GroupDetailGET");
 
 //Lancement du micro-framework
 $app->run();

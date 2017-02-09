@@ -51,4 +51,26 @@ class GroupeControleur
         }
     }
 
+    public function addMember($url, $member){
+        $user = modeles\EstMembre::where('id_groupe', '=', modeles\Groupe::where('url', '=', $url)->first()->id)->where('estCreateur', '=', true)->where('id_user', '=', modeles\User::where('nom', '=', $_SESSION['pseudo'])->first()->id)->first();
+        if(empty($user)){
+            $vue = new vues\GroupeVue();
+            return $vue->render("FORBIDDEN");
+        } else {
+
+            $groupe =  modeles\Groupe::where('url', '=', $url)->first();
+            $checkMembre = modeles\EstMembre::where('id_groupe', '=', $groupe->id)->where('id_user', '=', member)->first();
+
+            if(empty($checkMembre)){
+                $m = new modeles\EstMembre();
+                $m->id_groupe = $groupe->id;
+                $m->id_user = $member;
+                $m->estCreateur = false;
+                $m->save();
+            }
+
+            return true;
+        }
+    }
+
 }
