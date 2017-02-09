@@ -18,7 +18,7 @@ class ConnexionVue {
 					</p>
 					</form>
 					<p1>
-					<a href="'.$app->urlFor('inscriptionGET').'">ici</a>
+					
 					</br></br>
 
 					</p1>';
@@ -38,7 +38,7 @@ class ConnexionVue {
 					</form>
 					<p1>
 					Vous n\'êtes pas inscrit ? cliquez 
-					<a href="'.$app->urlFor('inscriptionGET').'">ici</a>
+					
 					</br></br>
 					</p1>';
 					break;
