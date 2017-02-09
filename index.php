@@ -2,7 +2,7 @@
 session_start();
 require_once ("vendor/autoload.php");
 
-use src\controleurs as controleurs;
+use crazyday\controleurs as controleurs;
 
 //Création de l'objet du micro-framework
 $app = new Slim\App();

@@ -1,8 +1,8 @@
 <?php
-namespace src\controleurs;
+namespace crazyday\controleurs;
 
 use Illuminate\Database\Capsule\Manager as DB;
-use src\vues as vues;
+use crazyday\vues as vues;
 
 class AccueilControleur
 {

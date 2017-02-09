@@ -90,6 +90,17 @@ class ComposerStaticInit287d1c4857026cae48c55b391cb29014
     );
 
     public static $prefixesPsr0 = array (
+        'c' => 
+        array (
+            'crazyday' => 
+            array (
+                0 => __DIR__ . '/../..' . '/src',
+            ),
+            'conf' => 
+            array (
+                0 => __DIR__ . '/../..' . '/',
+            ),
+        ),
         'P' => 
         array (
             'Pimple' => 

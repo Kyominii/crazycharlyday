@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'crazyday' => array($baseDir . '/src'),
+    'conf' => array($baseDir . '/'),
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
 );

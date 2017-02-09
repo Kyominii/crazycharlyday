@@ -1,6 +1,6 @@
 <?php
 
-namespace src\vues;
+namespace crazyday\vues;
 
 class AccueilVue
 {
