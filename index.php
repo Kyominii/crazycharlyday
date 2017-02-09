@@ -11,7 +11,11 @@ $app = new Slim\App();
 $app->get('/', function(){
     $controleur = new controleurs\AccueilControleur();
     echo $controleur->renderAccueil();
-})->name('AcceuilGET');
+})->setName('AcceuilGET');
+
+$app->get('/users', function(){
+    echo "test";
+})->setName('UsersGET');
 
 //Lancement du micro-framework
 $app->run();
