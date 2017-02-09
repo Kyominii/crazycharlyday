@@ -39,9 +39,9 @@ class AccueilVue
 			  </div>
 			  <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-				  <li><a href="{$racine}">Accueil</a></li>
-				  <li><a href="{$racine}logements">Les logements</a></li>
-				  <li><a href="{$racine}users">Utilisateurs</a></li>
+				  <li><a href="./">Accueil</a></li>
+				  <li><a href="logements">Les logements</a></li>
+				  <li><a href="users">Utilisateurs</a></li>
 				  <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon profil<span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -58,13 +58,13 @@ class AccueilVue
 			<h1 align="center" style="color:#ffffff">Bienvenue sur UN TOIT POUR TOUS</h1>
 			
 			<div class="row">
-				<div class="col-md-6"><a href="logements/" style="text-decoration:none"><div class="thumbnail">' . "<img src='assets/apart/logement.jpg' style=\"heigtht:500px; width:500px;\"/>
+				<div class="col-md-6"><a href="logements/" style="text-decoration:none"><div class="thumbnail">' . "<img src='assets/apart/logement.jpg' style=\"height:500px; width:500px;\"/>
 			<div class=\"caption\"> 
 				<h3 align=\"center\">Découvrez nos logements</h3> 
 			</div> 
 			</div></a>
 			</div>".
-				'<div class="col-md-6"><a href="utilisateurs/" style="text-decoration:none"><div class="thumbnail">' . "<img src='assets/connexion.jpg' style=\"heigtht:500px; width:500px;\"/>
+				'<div class="col-md-6"><a href="users/" style="text-decoration:none"><div class="thumbnail">' . "<img src='assets/connexion.jpg' style=\"height:500px; width:500px;\"/>
 			<div class=\"caption\"> 
 				<h3 align=\"center\">Voir nos utilisateurs</h3> 
 			</div> 
