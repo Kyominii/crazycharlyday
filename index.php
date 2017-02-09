@@ -2,14 +2,16 @@
 session_start();
 require_once ("vendor/autoload.php");
 
+use src\controleurs as controleurs;
+
 //Création de l'objet du micro-framework
 $app = new Slim\App();
 
 //Cas où nous sommes à la racine du site
 $app->get('/', function(){
-    echo "Le commencement";
+    $controleur = new controleurs\AccueilControleur();
+    echo $controleur->renderAccueil();
 });
-
 
 //Lancement du micro-framework
 $app->run();

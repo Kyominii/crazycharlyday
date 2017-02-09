@@ -2,6 +2,7 @@
 namespace src\controleurs;
 
 use Illuminate\Database\Capsule\Manager as DB;
+use src\vues as vues;
 
 class AccueilControleur
 {
@@ -24,5 +25,10 @@ class AccueilControleur
 
         $db->setAsGlobal();
         $db->bootEloquent();
+    }
+
+    function renderAccueil(){
+        $vue = new vues\AccueilVue();
+        return $vue->render("DEFAUT");
     }
 }
