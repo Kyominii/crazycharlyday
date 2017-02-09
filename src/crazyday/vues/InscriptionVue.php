@@ -101,7 +101,7 @@ class InscriptionVue {
 					  <li><a href="#">Page personnelle</a></li>
 					  <li><a href="#">Invitations</a></li>
 					  <li role="separator" class="divider"></li>
-					  <li><a href="#">Deconnexion</a></li>
+					  <li><a href="{$racine}deconnexion">Deconnexion</a></li>
 					</ul>
 				  </li>
 				</ul>
