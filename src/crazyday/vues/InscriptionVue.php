@@ -51,7 +51,7 @@ class InscriptionVue {
 				$content='<p>
 					<input type="text" name="pseudo_inscrit" />
 					<input type="password" name="mp_inscrit" />
-					<input type="password" name="cmp_inscrit" />'
+					<input type="password" name="cmp_inscrit" />';
 			}
 		}
 		$html = <<<END
