@@ -34,7 +34,11 @@ class UtilisateurVue
 
 
     private function htmlDetailedUser(){
-        return "<p style=\"color:#ffffff\">ID : " . $this->pbc->id . "; NOM : " . $this->pbc->nom  . "; MESSAGE : " . $this->pbc->message . "</p><img src='../assets/user/" . $this->pbc->id . ".jpg' />";
+		return '<div class="jumbotron" style="background-color:#999999">
+		<img src="../assets/user/' . $this->pbc->id . '.jpg" style ="float:left; margin-right:20px;"/>
+        <h1>'.$this->pbc->nom .'</h1>
+        <p>'.$this->pbc->message.'</p>
+		</div>';
     }
 
 
