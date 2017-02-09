@@ -1,5 +1,5 @@
 <?php
-namespace giftbox\vues;
+namespace crazyday\vues;
 class ConnexionVue {
 	
 	public function render($i) {
