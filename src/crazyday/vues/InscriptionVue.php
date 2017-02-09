@@ -17,7 +17,7 @@ class InscriptionVue {
 						</br>
 						<input type="password" name="mp_inscrit" />
 						';
-						if (empty($tab['mp']){
+						if (empty($tab['mp'])){
 							$content.='mot de passe non valide';
 						}
 						$content.='</div>
