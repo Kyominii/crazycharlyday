@@ -49,7 +49,7 @@ class InscriptionVue {
 				break;
 			}
 			case 3: {
-				$content='<form method="POST" action="/inscription">'
+				$content='<form method="POST" action="/inscription">';
 				$content.='<p>
 					pseudo :<input type="text" name="pseudo_inscrit" /></br>
 					mot de passe :<input type="password" name="mp_inscrit" /></br>
