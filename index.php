@@ -48,13 +48,13 @@ $app->post('/connexion',function(){
 })->setName('ConnexionPOST');
 
 $app->get('/inscription',function(){
-	$controleurInscription = new controleurs\ConnexionInscription();
-	$controleurInscription->afficher();
+	$Inscription = new controleurs\InscriptionConnexion();
+	$Inscription->afficher();
 })->setName('InscriptionGET');
 
 $app->post('/inscription',function(){
-	$controleurInscription = new controleurs\ConnexionInscription();
-	$controleurInscription->inscription($_POST['pseudo'],$_POST['pseudo'],$_POST['pseudo']);
+	$Inscription = new controleurs\InscriptionConnexion();
+	$Inscription->inscription($_POST['pseudo'],$_POST['pseudo'],$_POST['pseudo']);
 })->setName('InscriptionPOST');
 
 //Page de liste des utilisateurs
