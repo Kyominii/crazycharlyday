@@ -62,11 +62,14 @@ class GroupeControleur
             $checkMembre = modeles\EstMembre::where('id_groupe', '=', $groupe->id)->where('id_user', '=', $member)->first();
 
             if(empty($checkMembre)){
-                $m = new modeles\EstMembre();
-                $m->id_groupe = $groupe->id;
-                $m->id_user = $member;
-                $m->estCreateur = false;
-                $m->save();
+                if(!empty(modeles\User::where('id', '=', $member)->first())){
+                    $m = new modeles\EstMembre();
+                    $m->id_groupe = $groupe->id;
+                    $m->id_user = $member;
+                    $m->estCreateur = false;
+                    $m->save();
+                }
+
             }
 
             return true;
