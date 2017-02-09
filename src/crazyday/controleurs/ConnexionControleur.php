@@ -20,18 +20,14 @@ class ConnexionControleur{
 				//filtrer pseudo et mot de pass ici !!!!
 				$pseudo=filter_var($pseudo,FILTER_SANITIZE_STRING);
 				$mp=filter_var($mp,FILTER_SANITIZE_STRING);
-				$verif = User::where('pseudo', '=',$pseudo)->first();
-				if (empty($verif['pseudo']) || !password_verify($mp,$verif['mp']){
+				$verif = User::where('nom', '=',$pseudo)->first();
+				if (empty($verif['pseudo']) || $mp == $verif['mp']){
 					$html= $connect->render(2);
 				}else{
 					$_SESSION['pseudo'] = $pseudo;
 					$_SESSION['mp'] = $mp;
 					$html = $connect->render(3);
 				}
-			}
-	}else{
-		$html = $connect->render(3);
-	}
 		print $html;
 		
 	}
