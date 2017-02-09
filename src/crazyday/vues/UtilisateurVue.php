@@ -92,7 +92,7 @@ class UtilisateurVue
 			  <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 				  <li><a href="#">Accueil</a></li>
-				  <li><a href="#about">Les logements</a></li>
+				  <li><a href="{$racine}logements">Les logements</a></li>
 				  <li><a href="{$racine}users">Utilisateurs</a></li>
 				  <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon profil<span class="caret"></span></a>
