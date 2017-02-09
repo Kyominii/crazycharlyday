@@ -19,8 +19,8 @@ class GroupeVue
     }
 
     private function htmlDetailGroup(){
-        $html = "<h1>Groupe n°" . $this->pbc['groupe']->id . "</h1>
-        <ul>";
+        $html = "<h1 align=\"center\" style=\"color:#ffffff;\">Groupe n°" . $this->pbc['groupe']->id . "</h1>
+        <p style=\"font-size:#aaaaaa;\"><ul>";
 
         foreach ($this->pbc['membres'] as $membre){
             if($membre[1] == 1)
@@ -28,8 +28,8 @@ class GroupeVue
             else
                 $html.="<li>" . $membre[0]->nom . "</li>";
         }
-        $html.="</ul><p>Logement : ".$this->pbc['groupe']->id_logement."</p>";
-        $html.="<p>Description : " . $this->pbc['groupe']->description."</p>";
+        $html.="</ul></p><p style=\"font-size:#aaaaaa;\">Logement : ".$this->pbc['groupe']->id_logement."</p>";
+        $html.="<p style=\"font-size:#aaaaaa;\">Description : " . $this->pbc['groupe']->description."</p>";
 
         return $html;
     }
@@ -41,11 +41,13 @@ class GroupeVue
         switch ($selecteur){
             case "CREATE_GROUP":
                 $content = $this->htmlCreatedGroup();
+				$racine="./";
                 break;
             case "NO_GROUP":
                 $content = "<h1>Aucun groupe ne correspond à cette URL !</h1>";
             case "DETAIL_GROUP":
-                $html = $this->htmlDetailGroup();
+                $content = $this->htmlDetailGroup();
+				$racine="./../";
                 break;
             case "FORBIDDEN":
                 $html = "<h1>Vous n'avez pas la permission d'acéder à ce groupe !</h1>";
