@@ -3,11 +3,11 @@ namespace crazyday\vues;
 class ConnexionVue {
 	
 	public function render($i) {
-		$app = \Slim\Slim::getInstance();
+		//$app = \Slim\Slim::getInstance();
 		$content ="";
 		switch ($i) {
 			case 1: {
-				$content = '<form method="POST" action="'.$app->urlFor("ConnexionPOST").'">
+				$content = '<form method="POST" action="/connexion">
 					<p> 
 						Nom d\'utilisateur :
 					<input type="text" name="pseudo" />
@@ -26,7 +26,7 @@ class ConnexionVue {
 				break;
 			}
 			case 2: {
-				$content = '<form method="POST" action="'.$app->urlFor("ConnexionPOST").'">
+				$content = '<form method="POST" action="/connexion">
 					<p> 
 						Nom d\'utilisateur :
 					<input type="text" name="pseudo" />
@@ -45,7 +45,7 @@ class ConnexionVue {
 			}
 			case 3: {
 				$p = $_SESSION['pseudo'];
-				$content = '<form method="POST" action="'.$app->urlFor("AccueilGET").'">
+				$content = '<form method="POST" action="/">
 								<p> 
 								Bonjours '.$p.
 								'<input type="submit" name="deco" value="Retourner a l\'accueil">
