@@ -59,6 +59,12 @@ $app->get('/user/{id}', function($request, $response, $args){
     echo $controleur->renderUser($args['id']);
 })->setName("UserGET");
 
+//Page de liste des appartements
+$app->get('/logements', function(){
+    $controleur = new controleurs\LogementControleur();
+    echo $controleur->renderListLogement();
+})->setName('UsersGET');
+
 //Lancement du micro-framework
 $app->run();
 

@@ -18,10 +18,22 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+            <state relative-caret-position="290">
+              <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
               <folding>
                 <element signature="e#61#107#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogementControleur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/crazyday/controleurs/LogementControleur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+              <folding>
+                <element signature="e#39#65#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -30,8 +42,8 @@
       <file leaf-file-name="UtilisateurControleur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/crazyday/controleurs/UtilisateurControleur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="205">
+              <caret line="18" column="42" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="18" selection-end-column="42" />
               <folding>
                 <element signature="e#39#65#0#PHP" expanded="true" />
               </folding>
@@ -39,11 +51,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LogementVue.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/crazyday/vues/LogementVue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UtilisateurVue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/crazyday/vues/UtilisateurVue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="18" column="107" lean-forward="false" selection-start-line="18" selection-start-column="107" selection-end-line="18" selection-end-column="107" />
+            <state relative-caret-position="72">
+              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -62,8 +84,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/crazyday/modeles/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="68">
+              <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -82,41 +104,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="db.ini" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/conf/db.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="Logement.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/crazyday/modeles/Logement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,9 +140,12 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/src/crazyday/controleurs/AccueilControleur.php" />
         <option value="$PROJECT_DIR$/src/crazyday/modeles/User.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/src/crazyday/controleurs/UtilisateurControleur.php" />
         <option value="$PROJECT_DIR$/src/crazyday/vues/UtilisateurVue.php" />
+        <option value="$PROJECT_DIR$/src/crazyday/modeles/Logement.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/src/crazyday/vues/LogementVue.php" />
+        <option value="$PROJECT_DIR$/src/crazyday/controleurs/LogementControleur.php" />
         <option value="$PROJECT_DIR$/src/conf/db.ini" />
       </list>
     </option>
@@ -205,24 +210,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vues" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crazycharlyday" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crazycharlyday" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crazyday" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,7 +352,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9339000" />
+    <option name="totallyTimeSpent" value="10228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -550,14 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crazyday/modeles/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/crazyday/vues/AccueilVue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -566,10 +545,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/crazyday/modeles/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crazyday/modeles/Logement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crazyday/vues/UtilisateurVue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+        <state relative-caret-position="290">
+          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding>
             <element signature="e#61#107#0#PHP" expanded="true" />
           </folding>
@@ -578,26 +581,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/crazyday/controleurs/UtilisateurControleur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="205">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="18" selection-end-column="42" />
           <folding>
             <element signature="e#39#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crazyday/vues/UtilisateurVue.php">
+    <entry file="file://$PROJECT_DIR$/src/crazyday/vues/LogementVue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="18" column="107" lean-forward="false" selection-start-line="18" selection-start-column="107" selection-end-line="18" selection-end-column="107" />
+        <state relative-caret-position="307">
+          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crazyday/controleurs/LogementControleur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <element signature="e#39#65#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/conf/db.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
       </provider>
