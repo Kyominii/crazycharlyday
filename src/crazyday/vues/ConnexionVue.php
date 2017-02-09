@@ -4,6 +4,7 @@ class ConnexionVue {
 	
 	public function render($i) {
 		$app = \Slim\Slim::getInstance();
+		$content ="";
 		switch ($i) {
 			case 1: {
 				$content = '<form method="POST" action="'.$app->urlFor("ConnexionPOST").'">
@@ -62,10 +63,7 @@ class ConnexionVue {
 </div>
 </body>
 </html>';
-  }
-
-
-		
+  
 		return $html;
 	}
 }
