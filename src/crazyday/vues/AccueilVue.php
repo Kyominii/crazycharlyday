@@ -13,6 +13,7 @@ class AccueilVue
     }
 
     private function htmlDefaut(){
+    	$app = \Slim\Slim::getInstance();
         return '<div class="inner cover" style="margin-top:250px;">
             <h1 align="center" style="color:#ffffff">Bienvenue sur UN TOIT POUR TOUS</h1>
             <p class="lead" align="center" style="font-size:25px; color:#aaaaaa">
@@ -20,7 +21,7 @@ class AccueilVue
 			Connectez vous afin de rejoindre ou créer un groupe de colocation et ainsi trouver votre nouvelle demeur.
 			</p>
             <p class="lead" align="center">
-              <a href="connexion" class="btn btn-lg btn-default">Connexion</a>
+              <a href=".'$app->urlFor('ConnexionGET').'" class="btn btn-lg btn-default">Connexion</a>
             </p>
           </div>';
     }
