@@ -15,15 +15,11 @@ class ControleurConnexion{
 	public function connexion($pseudo =null,$mp=null){
 		// controle la connexion
 		$connect = new ConnexionVue();
-		if(!isset($_SESSION['pseudo'],$_SESSION['mp'])){
-			if (!isset($pseudo)){
-				$html= $connect->render(1);
-			}else{
 				//filtrer pseudo et mot de pass ici !!!!
 				$pseudo=filter_var($pseudo,FILTER_SANITIZE_STRING);
 				$mp=filter_var($mp,FILTER_SANITIZE_STRING);
-				$verif = Utilisateur::where('pseudo', '=',$pseudo)->first();
-				if (empty($verif['pseudo']) || /*!password_verify($mp,$verif['mp'])*/ $mp!=$verif['mp']){
+				$verif = User::where('pseudo', '=',$pseudo)->first();
+				if (empty($verif['pseudo']) || !password_verify($mp,$verif['mp']){
 					$html= $connect->render(2);
 				}else{
 					$_SESSION['pseudo'] = $pseudo;
