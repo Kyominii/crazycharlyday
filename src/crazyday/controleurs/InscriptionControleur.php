@@ -29,12 +29,11 @@ class InscriptionControleur{
 			$res=$v->render(1,$tabverite);
 			echo "rendu 1";
 		}else{
-			echo "enregistrement";
 			if (isset($pseudo) && isset($mp)){
 				echo "enregistré";
 			$n = new User();
 			$n->nom=$pseudo;
-			$n->mp = password_hash($mp,PASSWORD_DEFAULT['cost'=> 12] );
+			$n->mp = password_hash($mp);
 			$n->save();
 			$res=$v->render(2,$tabverite);
 			$_SESSION['pseudo']=$pseudo;
