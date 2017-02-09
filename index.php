@@ -39,6 +39,7 @@ $app->get('/', function(){
 $app->get('/connexion',function(){
 	$controleurConnexion = new controleurs\ConnexionControleur();
 	$controleurConnexion->afficher();
+
 })->setName('ConnexionGET');
 
 $app->post('/connexion',function(){
