@@ -16,12 +16,16 @@ class LogementVue
         $html = "<ul>";
 
         foreach ($this->pbc as $logements){
-            $html .= "<li><a href='/user/$logements->id'>" . $logements->places . " places" . "<img src='/assets/apart/$logements->id.jpg'/>" . "</a></li>";
+            $html .= "<li><a href='/logement/$logements->id'>" . $logements->places . " places" . "<img src='/assets/apart/$logements->id.jpg'/>" . "</a></li>";
         }
 
         $html .= "</ul>";
 
         return $html;
+    }
+
+    private function htmlDetailedUser(){
+        return "<p>ID : " . $this->pbc->id . "; NOM : " . $this->pbc->places  . "</p><img src='../assets/apart/" . $this->pbc->id . ".jpg' />";
     }
 
     function render($selecteur){
@@ -30,11 +34,11 @@ class LogementVue
             case "LIST_LOGEMENT":
                 $html = $this->htmlListLogement();
                 break;
-            case "DETAILED_USER":
-                $html = "";
+            case "DETAILED_LOGEMENT":
+                $html = $this->htmlDetailedUser();
                 break;
-            case "NO_USER":
-                $html = "<h1>Aucun utilisateur ne correspond à cette URL !</h1>";
+            case "NO_LOGEMENT":
+                $html = "<h1>Aucun logement ne correspond à cette URL !</h1>";
                 break;
             default:
                 $html = "<h1>Erreur : mauvais selecteur !!!</h1>";
