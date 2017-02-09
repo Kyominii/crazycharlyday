@@ -78,7 +78,7 @@ class ConnexionVue {
 			  </div>
 			  <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-				  <li><a href="#">Accueil</a></li>
+				  <li><a href="{$racine}">Accueil</a></li>
 				  <li><a href="{$racine}logements">Les logements</a></li>
 				  <li><a href="{$racine}users">Utilisateurs</a></li>
 				  <li class="dropdown">
