@@ -46,11 +46,15 @@ class AccueilVue
 			<link href="{$racine}assets/css/bootstrap.min.css" rel="stylesheet" media="all" type="text/css">
 			<link href="{$racine}assets/css/bootstrap-theme.min.css" rel="stylesheet" media="all" type="text/css">
 		</head>
-		<body style="background-color:#000000">
+		<body style="background-color:#333333">
 			<div class="container">
 			
 			$content
 			</div>
+			
+		<footer style="margin-top:100px;">
+			<p align="center" style="color:#aaaaaa">Crazy Charly Day 2017 - Equipe RKO</p>
+		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="{$racine}assets/js/bootstrap.min.js"></script>
 		</body>

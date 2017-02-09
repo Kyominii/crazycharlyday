@@ -1,0 +1,7 @@
+.thumbnail{
+	background-color:#999999;
+}
+
+.thumbnail:hover{
+	background: rgba(200,200,200,0.9);
+}
