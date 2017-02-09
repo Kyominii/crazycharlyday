@@ -59,7 +59,7 @@ class GroupeControleur
         } else {
 
             $groupe =  modeles\Groupe::where('url', '=', $url)->first();
-            $checkMembre = modeles\EstMembre::where('id_groupe', '=', $groupe->id)->where('id_user', '=', member)->first();
+            $checkMembre = modeles\EstMembre::where('id_groupe', '=', $groupe->id)->where('id_user', '=', $member)->first();
 
             if(empty($checkMembre)){
                 $m = new modeles\EstMembre();
