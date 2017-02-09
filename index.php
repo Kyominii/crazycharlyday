@@ -35,7 +35,8 @@ $app->get('/', function(){
 
 //Page de liste des utilisateurs
 $app->get('/users', function(){
-    echo "test";
+    $controleur = new controleurs\UtilisateurControleur();
+    echo $controleur->renderListUsers();
 })->setName('UsersGET');
 
 //Lancement du micro-framework
