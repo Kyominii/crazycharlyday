@@ -108,13 +108,13 @@ $app->get('/group/{id}', function($request, $response, $args){
     echo $controleur->detailGroup($args['id']);
 })->setName("GroupDetailGET");
 
-$app->get('/group/{id}/add/{member}', function($request, $response, $args){
+$app->post('/group/{id}', function($request, $response, $args){
     if(!controleurs\ConnexionControleur::checkConnexion($_SESSION['pseudo'], $_SESSION['mp']))
         return $response->withRedirect("/");
     $controleur = new controleurs\GroupeControleur();
-    $controleur->addMember($args['id'], $args['member']);
+    $controleur->addMember($args['id'], $_POST['id_user']);
     return $response->withRedirect("/group/" . $args['id']);
-})->setName("GroupDetailGET");
+})->setName("GroupAddPOST");
 
 //Lancement du micro-framework
 $app->run();

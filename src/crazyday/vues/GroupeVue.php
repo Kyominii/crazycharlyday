@@ -31,6 +31,12 @@ class GroupeVue
         $html.="</ul></div><p style=\"color:#aaaaaa;\">Logement : ".$this->pbc['groupe']->id_logement."</p>";
         $html.="<p style=\"color:#aaaaaa;\">Description : " . $this->pbc['groupe']->description."</p>";
 
+        $html.="<form id='formulaire' method='post' action=''>
+        <label style=\"color:#aaaaaa;\">ID utilisateur</label>
+        <input name='id_user' type=\"text\" />
+        <input id='submitButton' type=\"submit\" />
+        </form>";
+
         return $html;
     }
 
