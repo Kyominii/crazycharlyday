@@ -16,7 +16,7 @@ class InscriptionControleur{
 		$cemail=filter_var($cemail,FILTER_SANITIZE_EMAIL);
 		$tabverite = array();
 		//vérification pseudo
-		$test = User::where('pseudo', '=', $pseudo)->first();
+		$test = User::where('nom', '=', $pseudo)->first();
 		if(isset($pseudo) && empty($test) && $pseudo!=null){//rajouter d'autre vérification
 			$tabverite['pseudo'] =$pseudo;
 		}
@@ -28,9 +28,9 @@ class InscriptionControleur{
 		if (!isset($tabverite['pseudo']) || !isset($tabverite['mp'])){
 			$res=$v->render(1,$tabverite);
 		}else{
-			if (isset($pseudo) && isset($mp) && isset($email)){
+			if (isset($pseudo) && isset($mp)){
 			$n = new User();
-			$n->pseudo=$pseudo;
+			$n->nom=$pseudo;
 			$n->mp = $mp; //password_hash($mp,PASSWORD_DEFAULT['cost'=> 12] );
 			$n->save();
 			$res=$v->render(2,$tabverite);

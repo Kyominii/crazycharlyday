@@ -6,7 +6,7 @@ class InscriptionVue {
 		switch($i){
 			case 1: {
 				$content='<form method="POST" action="/inscription">
-				pseudo :';
+				Nom d\'utilisateur :';
 						if (empty($tab['pseudo'])){
 							$content.='<input type="text" name="pseudo_inscrit" />pseudo non valide';
 						}elseif (isset($tab['pseudo'])){
@@ -51,7 +51,7 @@ class InscriptionVue {
 			case 3: {
 				$content='<form method="POST" action="/inscription">';
 				$content.='<p>
-					pseudo :<input type="text" name="pseudo_inscrit" /></br>
+					Nom d\'utilisateur :<input type="text" name="pseudo_inscrit" /></br>
 					mot de passe :<input type="password" name="mp_inscrit" /></br>
 					confirmation mot de passe:<input type="password" name="cmp_inscrit" /></br>
 					<input type="submit" value="Inscription" />
