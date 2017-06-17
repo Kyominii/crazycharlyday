@@ -1,4 +1,4 @@
-## Crazycharlyday 2017 (épreuve inforamtique, IUT Nancy-Charlemagne)
+## Crazycharlyday 2017 (épreuve informatique, IUT Nancy-Charlemagne)
 
 Aucun support ne sera fait sur ce projet.
 
